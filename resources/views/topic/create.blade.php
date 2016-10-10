@@ -30,6 +30,5 @@
 			<button type="submit" class="btn btn-success">Добавить тему</button>
 		{!! Form::close() !!}
 	</div>
-
 </div>
 @endsection
