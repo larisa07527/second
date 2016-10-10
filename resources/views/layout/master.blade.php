@@ -21,9 +21,9 @@
         <a class="navbar-brand" href="#">Laravel</a>
       </div>
       <ul class="nav navbar-nav">
-        <li><a href="{{url('topic')}}">Главная</a></li>
-        <li><a href="{{url('topic/create')}}">Новая тема</a></li>
-        <li><a href="#">Page 2</a></li> 
+        <li {{$page=='Add Block'?'class=active':''}}><a href="{{url('topic')}}">Главная</a></li>
+        <li {{$page=='Добавить тему'?'class=active':''}}><a href="{{url('topic/create')}}">Новая тема</a></li>
+        <li {{$page=='Add Block'?'class=active':''}}><a href="{{url('block/create')}}">Add Block</a></li> 
         <li><a href="#">Page 3</a></li> 
         <li><a href="#">Page 4</a></li> 
       </ul>
