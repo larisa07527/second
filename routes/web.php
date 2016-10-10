@@ -14,7 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/home', "TestController@index");
-// файл-вид в папке test и контроллер начинается на test метод в контроллере addcountry
-Route::get('/addcountry', "TestController@addcountry");
-Route::post('/addcountry', "TestController@storecountry");
+
+Route::resource('topic','TopicController');

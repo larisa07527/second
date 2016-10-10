@@ -11,6 +11,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 </head>
 <body>
+  <div class="page-header" style="color:darkblue;" align="center">
+    <h1>Сайт "Тема"</h1>
+  </div>
 	@section('menu')
 	<nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -18,15 +21,16 @@
         <a class="navbar-brand" href="#">Laravel</a>
       </div>
       <ul class="nav navbar-nav">
-        <li><a href="{{url('home')}}">Главная</a></li>
-        <li><a href="{{url('addcountry')}}">Добавить страну</a></li>
+        <li><a href="{{url('topic')}}">Главная</a></li>
+        <li><a href="{{url('topic/create')}}">Новая тема</a></li>
         <li><a href="#">Page 2</a></li> 
         <li><a href="#">Page 3</a></li> 
+        <li><a href="#">Page 4</a></li> 
       </ul>
     </div>
   </nav>
 
-  <div class="container" >
+  <div class="container" style="background-color:lightpink;color:darkblue;min-height:600px;" >
       @yield('content')
   </div> 
 </body>
