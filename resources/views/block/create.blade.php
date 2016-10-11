@@ -24,20 +24,20 @@
 		</div>
 		{!! Form::model($block, array('action'=>'BlockController@store','files'=>true,'class'=>'form')) !!}
 			<div class="form-group">
-				{!! Form::label('topicid','Select Topic') !!}
+				{!! Form::label('topicid','Все топики') !!}
 				{!! Form::select('topicid',$topics,array('class'=>'form-control')) !!}
-				<a href="{{url('topic/create')}}" class="btn btn-info">Add new topic</a>
+				<a href="{{url('topic/create')}}" class="btn btn-info">Добавить новый топик</a>
 			</div>
 			<div class="form-group">
-				{!! Form::label('title','Block Title') !!}
+				{!! Form::label('title','Название блока') !!}
 				{!! Form::text('title',"",array('class'=>'form-control')) !!}
 			</div>
 			<div class="form-group">
-				{!! Form::label('content','Add Content') !!}
+				{!! Form::label('content','Добавить комментарий') !!}
 				{!! Form::textarea('content',"",array('class'=>'form-control')) !!}
 			</div>
 			<div class="form-group">
-				{!! Form::label('imagepath','Add Image') !!}
+				{!! Form::label('imagepath','Добавить картинку') !!}
 				{!! Form::file('imagepath',"",array('class'=>'form-control')) !!}
 			</div>		
 			<button type="submit" class="btn btn-success">Добавить block</button>

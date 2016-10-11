@@ -29,7 +29,7 @@ class BlockController extends Controller
     {
         $block=new Block;
         $topics=Topic::pluck('topicname','id');
-        return view('block.create',array('block'=>$block,'topics'=>$topics,'page'=>'Add Block'));
+        return view('block.create',array('block'=>$block,'topics'=>$topics,'page'=>'Добавить Block'));
     }
 
     /**
@@ -51,7 +51,7 @@ class BlockController extends Controller
         $block->topicid=$request->topicid;
         $block->content=$request->content;
         if($fname!=null)
-            $block->imagepath='/images'.$originalname;
+            $block->imagepath='/images/'.$originalname;
         else
             $block->imagepath='';
         if(!$block->save())
